@@ -17,4 +17,11 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" })); //extended to al
 app.use(express.static("public")); // static to store files / favicons in a local folder
 app.use(cookieParser());
 
+//ROUTES =>
+import userRouter from "./routes/user.routes.js";
+
+//ROUTES DECLARATION =>
+
+app.use("/api/v1/users", userRouter);
+
 export { app };
